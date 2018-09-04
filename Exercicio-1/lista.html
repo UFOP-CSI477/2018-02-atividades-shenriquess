@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-br" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Lista de Alunos</title>
+
+    <link href="geral.css" rel="stylesheet">
+
+    <nav id="menu">
+      <ul>
+          <li><a href="cadastro.html">Cadastrar</a></li>
+          <li><a href="lista.html">Listar</a></li>
+          <li><a href="index.html">Sair</a></li>
+      </ul>
+
+    </nav>
+      <style>
+
+      table, th, td {
+          border: 1px solid black;
+          border-collapse: collapse;
+      }
+      table{
+        width:70%;
+      }
+
+      h1{
+        color: red;
+        font-family: arial;
+      }
+
+      .fundo {
+        background-color: blue;
+      }
+
+      p.maior{
+        color: #c6c6c6;
+        text-align: center;
+      }
+
+    </style>
+  </head>
+  <body>
+
+      <h1>Lista de alunos(as) matriculados na turma</h1>
+      <p class="maior">Aula no laboratório H102</p>
+      <p>Horário da Aula: 18:50-20:30 horas</p>
+      <table>
+
+        <caption style="font-size:20pt; color:#d8e7a3">Turma de Web</caption>
+        <!--Cabeçalho //-->
+        <thead>
+          <tr>
+            <th>Matrícula</th>
+            <th>Nome</th>
+            <th>E-mail</th>
+            <th>Curso</th>
+            <th class="fundo">Turma</th>
+          </tr>
+      </thead>
+        <!--Dados //-->
+      <tbody>
+          <tr>
+            <td>1</td>
+            <td>Ana</td>
+            <td>ana@web.com.br</td>
+            <td>SI</td>
+            <td rowspan="4" style="text-align:center">11</td>
+          </tr>
+
+          <tr>
+            <td>2</td>
+            <td>Pedro</td>
+            <td>pedro@web.com.br</td>
+            <td>EJM</td>
+          </tr>
+
+          <tr>
+            <td>3</td>
+            <td>Brígida</td>
+            <td>brigida@web.com.br</td>
+            <td>SI</td>
+          </tr>
+
+          <tr>
+            <td>4</td>
+            <td>Marcos</td>
+            <td>marcos@web.com.br</td>
+            <td>SI</td>
+          </tr>
+      </tbody>
+
+      <tfoot>
+          <tr>
+            <td colspan="2">Total de pessoas:</td>
+            <td colspan="3">2</td>
+          </tr>
+      </tfoot>
+
+      </table>
+      <br><br>
+      <a href="index.html">Voltar</a>
+    </body>
+</html>

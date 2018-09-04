@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Cadastro de alunos(as)</title>
+    <link href="geral.css" rel="stylesheet">
+
+    <nav id="menu">
+      <ul>
+          <li><a href="cadastro.html">Cadastrar</a></li>
+          <li><a href="lista.html">Listar</a></li>
+          <li><a href="index.html">Sair</a></li>
+      </ul>
+
+    </nav>
+  </head>
+  <body>
+    <h1>Dados do cadastro</h1>
+
+    <form method="post" action="validar.html">
+      <label for="nome" >Nome:</label>
+      <input type="text" name="nome" placeholder="Nome da pessoa"><br><br>
+
+      <label for="endereco">Endereço:</label>
+      <input type="text" name="endereco"><br><br>
+
+      <label for="elefone">Telefone:</label>
+      <input type="tel" name="telefone" maxlength="16" placeholder="(999) 1111-2222"><br><br>
+
+      <label for="genero">Gênero</label>
+
+      <input type="radio" id="feminino" name="genero" value="F">
+      <label for="feminino">Feminino</label>
+
+      <input type="radio" id="masculino" name="genero" value="M">
+      <label for="masculino">Masculino</label>
+
+      <input type="radio" id="naobinario" name="genero" value="N">
+      <label for="nabinario">Não binário</label>
+
+      <br><br>
+
+      <label for="area">Áreas de Interesse:</label>
+
+      <input type="checkbox" id="web" name="area[0]">
+      <label for="web">Desenvolvimento Web</label>
+
+      <input type="checkbox" id="bd" name="area[1]">
+      <label for="bd">Banco de Dados</label>
+
+      <input type="checkbox" id="otim" name="area[2]">
+      <label for="otim">Otimização</label>
+
+      <br><br>
+
+      <label for="cidade">Cidade:</label>
+      <select name="cidade">
+        <option value="0">Selecione:</option>
+        <option value="1">João Monlevade</option>
+        <option value="2">Itabira</option>
+        <option value="3">Alvinópolis</option>
+        <option value="4" selected>Belo Horizonte</option>
+        <option value="5">Itaúna</option>
+      </select>
+
+      <br><br>
+
+      <label for="usuario">Usuário:</label>
+      <input type="text" name="usuario">
+
+      <label for="senha">Senha:</label>
+      <input type="password" name="senha">
+
+      <br><br>
+
+      <input type="submit" value="Cadastrar">
+      <input type="reset" value="Limpar">
+
+      <br><br>
+
+      <a href="index.html">Voltar</a>
+
+
+    </form>
+
+  </body>
+</html>
