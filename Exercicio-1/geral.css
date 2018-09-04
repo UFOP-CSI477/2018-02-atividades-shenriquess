@@ -18,7 +18,7 @@ img{
 }
 
 table{
-  width:70%;
+  width:80%;
 }
 
 h1, h2 {
@@ -32,6 +32,10 @@ h1, h2 {
 h2{
   padding-left: 20em;
 
+}
+
+h1.sair {
+    padding-left: 14em;
 }
 
 #menu ul {

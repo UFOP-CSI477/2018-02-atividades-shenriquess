@@ -1,15 +1,15 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="pt-br" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>Cadastro de alunos(as)</title>
+    <title>Cadastro de usuários(as) do Sistema de Controle Nutricional Escolar - NutriClass</title>
     <link href="geral.css" rel="stylesheet">
 
     <nav id="menu">
       <ul>
           <li><a href="cadastro.html">Cadastrar</a></li>
           <li><a href="lista.html">Listar</a></li>
-          <li><a href="index.html">Sair</a></li>
+          <li><a href="sair.html">Sair</a></li>
       </ul>
 
     </nav>
@@ -19,13 +19,16 @@
 
     <form method="post" action="validar.html">
       <label for="nome" >Nome:</label>
-      <input type="text" name="nome" placeholder="Nome completo"><br><br>
+      <input type="text" name="nome" placeholder="Nome Completo"><br><br>
 
       <label for="endereco">Endereço:</label>
-      <input type="text" name="endereco"><br><br>
+      <input type="text" name="endereco" placeholder="Endereço Completo"><br><br>
 
-      <label for="elefone">Telefone:</label>
+      <label for="telefone">Telefone:</label>
       <input type="tel" name="telefone" maxlength="14" placeholder="(XX)XXXXX-XXXX"><br><br>
+
+      <label for="email">Email:</label>
+      <input type="em" name="email" maxlength="30" placeholder="exemplo@exemplo.com"><br><br>
 
       <label for="genero">Gênero</label>
 
@@ -40,20 +43,23 @@
 
       <br><br>
 
-      <label for="area">Áreas de Interesse:</label>
+      <label for="area">Modalidade Escolar:</label>
 
       <input type="checkbox" id="web" name="area[0]">
-      <label for="web">Desenvolvimento Web</label>
+      <label for="web">Escola de Tempo Integral</label>
 
       <input type="checkbox" id="bd" name="area[1]">
-      <label for="bd">Banco de Dados</label>
+      <label for="bd">Escola de Tempo Parcial</label>
 
       <input type="checkbox" id="otim" name="area[2]">
-      <label for="otim">Otimização</label>
+      <label for="otim">Creche</label>
+
+      <input type="checkbox" id="otim" name="area[2]">
+      <label for="otim">Educação de Jovens e Adultos - EJA</label>
 
       <br><br>
 
-      <label for="cidade">Cidade:</label>
+      <label for="cidade">Cidade em que atua:</label>
       <select name="cidade">
         <option value="0" selected>Selecione</option>
         <option value="1">João Monlevade</option>
