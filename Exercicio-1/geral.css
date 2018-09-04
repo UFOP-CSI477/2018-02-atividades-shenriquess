@@ -3,12 +3,15 @@ body {
   padding-right: 8em;
   font-family: Georgia, "Times New Roman",
         Times, serif;
-  color: purple;
+  color: #FFFFFF;
   background-color: #6A5ACD
 }
 
 table, th, td {
-    border: 1px solid black;
+    font-family: Helvetica, Geneva, Arial,
+    SunSans-Regular, sans-serif;
+    color: #FFFFFF;
+    border: 1px solid white;
     border-collapse: collapse;
 }
 
@@ -30,7 +33,7 @@ h1, h2 {
 }
 
 h2{
-  padding-left: 20em;
+  padding-left: 7em;
 
 }
 
@@ -38,6 +41,12 @@ h1.sair {
     padding-left: 14em;
 }
 
+caption {
+  font-family: Helvetica, Geneva, Arial,
+  SunSans-Regular, sans-serif;
+  padding-left: 2em;
+  color: #F8F8FF;
+}
 #menu ul {
     padding:0px;
     margin:0px;
