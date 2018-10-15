@@ -1,0 +1,72 @@
+body {
+  padding-left: 8em;
+  padding-right: 8em;
+  font-family: Georgia, "Times New Roman",
+        Times, serif;
+  color: #FFFFFF;
+  background-color: #6A5ACD
+}
+
+table, th, td {
+    font-family: Helvetica, Geneva, Arial,
+    SunSans-Regular, sans-serif;
+    color: #FFFFFF;
+    border: 1px solid white;
+    border-collapse: collapse;
+}
+
+img{
+  padding-left: 25em;
+  width:35%;
+}
+
+table{
+  width:80%;
+}
+
+h1, h2 {
+  font-family: Helvetica, Geneva, Arial,
+  SunSans-Regular, sans-serif;
+  padding-left: 8em;
+  color: #F8F8FF;
+
+}
+
+h2{
+  padding-left: 7em;
+
+}
+
+h1.sair {
+    padding-left: 14em;
+}
+
+caption {
+  font-family: Helvetica, Geneva, Arial,
+  SunSans-Regular, sans-serif;
+  padding-left: 2em;
+  color: #F8F8FF;
+}
+#menu ul {
+    padding:0px;
+    margin:0px;
+    background-color:#EDEDED;
+    list-style:none;
+}
+
+#menu ul li { display: inline; }
+
+#menu ul li a {
+    padding: 2px 10px;
+    display: inline-block;
+    background-color:#EDEDED;
+    color: #333;
+    text-decoration: none;
+    border-bottom:3px solid #EDEDED;
+}
+
+#menu ul li a:hover {
+    background-color:#D6D6D6;
+    color: #6D6D6D;
+    border-bottom:3px solid #EA0000;
+}
