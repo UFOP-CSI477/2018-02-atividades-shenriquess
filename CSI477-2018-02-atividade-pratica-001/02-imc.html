@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-br" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Cálculo de IMC</title>
+
+    <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.css">
+    <script src="jquery-3.3.1.js"></script>
+    <script src="imc.js"></script>
+    <script src="jquery.mask.js"></script>
+
+    <!-- <link href="geral.css" rel="stylesheet"> -->
+  </head>
+  <body>
+    <div class="container-fluid">
+      <nav class="navbar navbar-expand-sm  navbar-dark bg-dark">
+          <div class="collapse navbar-collapse" id="menuPrincipal">
+          <ul class="navbar-nav">
+            <li class="nav-item"><a class="nav-link" href="01-corrida.html">Ir para: Exercício 1 - Competição de Carrinhos de Rolimã</a></li>
+            <!--<li class="nav-item"><a class="nav-link" href="cadastro.html">Cadastro</a></li>
+            <li class="nav-item"><a class="nav-link" href="lista.html">Relatório</a></li>
+            <li class="nav-item"><a class="nav-link" href="sair.html">Sair</a></li>-->
+          </ul>
+          </div>
+
+      </nav>
+
+      <div class="jumbotron">
+        <h1>Cálculo de IMC</h1>
+      </div>
+
+      <form name="dados">
+
+        <div class="form-row">
+          <div class="col">
+            <div class="form-group">
+              <label for="peso" id="labelPeso">Entre com o seu peso:</label>
+              <input type="text" name="peso" value="" class="form-control form-control-lg" id="idPeso">
+              <div class="alert alert-danger" style="display: none" id="alertaPeso">
+                <span>Entrada inválida!</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="col">
+              <div class="form-group">
+                <label for="altura" id="labelAltura">Entre com a sua altura:</label>
+                <input type="text" name="altura" value="" class="form-control form-control-lg" id="idAltura">
+                <div class="alert alert-danger" style="display: none" id="alertaAltura">
+                  <span>Entrada inválida!</span>
+                </div>
+              </div>
+          </div>
+
+          <div class="col">
+              <div class="form-group">
+                <label for="valor" id="labelValor">Cálculo do IMC:</label>
+                <input type="text" name="valor" value="" disabled   class="form-control form-control-lg" id="idValor">
+              </div>
+          </div>
+
+          <div class="col">
+              <div class="form-group">
+                <label for="classificacao" id="labelClassificacao">Classificação:</label>
+                <input type="text" name="classificacao" disabled class="form-control form-control-lg" id="idClassificacao">
+              </div>
+          </div>
+        </div>
+        <div class="form-group">
+          <input type="button" class="btn btn-primary" name="calculo" value="Calcular" id="btnCalculo">
+          <input type="reset" class="btn btn-warning" value="Limpar" id="btnLimpar">
+        </div>
+      </form>
+
+      <div class="row">&nbsp</div>
+
+      <div class="table-responsive">
+      <h4><small class="text-muted">Intervalo de Peso Ideal</small></h4>
+      <table class="table table-light table-sm table-bordered table-striped table-hover" id="pesoideal-table">
+        <thead>
+          <tr>
+            <th>Sua Altura</th>
+            <th>Peso Mínimo</th>
+            <th>Peso Máximo</th>
+          </tr>
+        </thead>
+        <!--Dados //-->
+        <tbody>
+
+        </tbody>
+
+      </table>
+      <div class="form-group">
+        <input type="button" class="btn btn-primary" name="intevaloPeso" value="Caulcular Peso Ideal" id="btnIntervalo">
+        <input type="button" class="btn btn-warning" name="reiniciar" value="Reiniciar" id="btnReiniciar">
+
+      </div>
+    </div>
+    </div>
+    </body>
+</html>

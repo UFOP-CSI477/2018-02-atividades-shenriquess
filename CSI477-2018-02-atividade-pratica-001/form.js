@@ -51,8 +51,6 @@ function posicaoLargada(campo, label, dados) {
           $(campo).focus();
           // Abandonar a execução
           return false;
-        }else{
-          return true;
         }
       }
 
@@ -182,13 +180,16 @@ function criaNovaTabela(dados){
 
 $(document).ready(function(){
   var z = 0;
+  var total = 0;
   var matriz = new Array();
   // Vincular ação ao botão de cálculo
   $("#btnEnviar").click(function(){
       if(validarCampoInt("input[name='posicao']", "#alertaPosicao", "#labelPosicao")&&
       validarCampoString("input[name='nome']", "#alertaNome", "#labelNome")&&
       validarCampoInt("input[name='tempo']", "#alertaTempo", "#labelTempo")&&
-      posicaoLargada("input[name='posicao']", "#labelPosicao", matriz)){
+      posicaoLargada("input[name='posicao']", "#labelPosicao", matriz)&&
+      total < 6){
+      total++;
       var newRow = $("<tr>");
       var cols = "";
       cols += '<td>' + $("#idPosicao").val() + '</td>';
@@ -206,7 +207,12 @@ $(document).ready(function(){
       $("#idPosicao").val("");
       $("#idNome").val("");
       $("#idTempo").val("");
+    }else{
+      if(total == 6){
+
+        window.alert("São aceitos apenas 6 participantes por vez!");
       }
+    }
 
 
   });
@@ -215,6 +221,7 @@ $(document).ready(function(){
     if (matriz.length === 0) {
       window.alert("Entre com os dados primeiro!");
     }else{
+      $("#btnVencedor").attr("disabled", true);
       $("#btnEnviar").attr("disabled", true);
       $("#btnLimpar").attr("disabled", true);
       $("#idPosicao").attr("disabled", true);
