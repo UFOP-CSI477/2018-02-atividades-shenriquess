@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-br" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Lista de Alunos</title>
+
+    <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.css">
+    <script src="jquery-3.3.1.js"></script>
+    <script src="form.js"></script>
+
+    <!-- <link href="geral.css" rel="stylesheet"> -->
+  </head>
+  <body>
+    <div class="container-fluid">
+      <nav class="navbar navbar-expand-sm  navbar-dark bg-dark">
+          <div class="collapse navbar-collapse" id="menuPrincipal">
+          <ul class="navbar-nav">
+            <li class="nav-item"><a class="nav-link" href="01-corrida.html">Início</a></li>
+            <!--<li class="nav-item"><a class="nav-link" href="cadastro.html">Cadastro</a></li>
+            <li class="nav-item"><a class="nav-link" href="lista.html">Relatório</a></li>
+            <li class="nav-item"><a class="nav-link" href="sair.html">Sair</a></li>-->
+          </ul>
+          </div>
+
+      </nav>
+
+      <div class="jumbotron">
+        <h1>Competição de Carrinhos de Rolimã</h1>
+      </div>
+
+      <form name="dados">
+
+        <div class="form-row">
+          <div class="col">
+            <div class="form-group">
+              <label for="posicao" id="labelPosicao">Posição de Largada:</label>
+              <input type="text" name="posicao" value="" class="form-control form-control-lg" id="idPosicao">
+              <div class="alert alert-danger" style="display: none" id="alertaPosicao">
+                <span>Entrada inválida!</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="col">
+              <div class="form-group">
+                <label for="nome" id="labelNome">Nome do(a) Competidor(a):</label>
+                <input type="text" name="nome" value="" class="form-control form-control-lg" id="idNome">
+                <div class="alert alert-danger" style="display: none" id="alertaNome">
+                  <span>Entrada inválida!</span>
+                </div>
+              </div>
+          </div>
+
+          <div class="col">
+              <div class="form-group">
+                <label for="tempo" id="labelTempo">Tempo de Realização da Prova:</label>
+                <input type="text" name="tempo" value=""  class="form-control form-control-lg" id="idTempo">
+                <div class="alert alert-danger" style="display: none" id="alertaTempo">
+                  <span>Entrada inválida!</span>
+                </div>
+              </div>
+          </div>
+        </div>
+        <div class="form-group">
+          <input type="button" class="btn btn-primary" name="enviar" value="Cadastrar" id="btnEnviar">
+          <input type="reset" class="btn btn-warning" value="Limpar" id="btnLimpar">
+        </div>
+      </form>
+
+      <div class="table-responsive">
+      <table class="table table-light table-sm table-bordered table-striped table-hover" id="competicao-table">
+        <thead>
+          <tr>
+            <th>Largada</th>
+            <th>Competidor(a)</th>
+            <th>Tempo(s)</th>
+          </tr>
+        </thead>
+        <!--Dados //-->
+        <tbody>
+
+        </tbody>
+
+      </table>
+      <div class="form-group">
+        <input type="button" class="btn btn-primary" name="vencedor" value="Caulcular Vencedor(es)" id="btnVencedor">
+        <input type="button" class="btn btn-warning" name="reiniciar" value="Reiniciar" id="btnReiniciar">
+
+      </div>
+    </div>
+    </div>
+    </body>
+</html>
