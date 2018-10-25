@@ -16,7 +16,7 @@ function validarCampoString(campo, alerta, label) {
     // Limpar o campo
     $(campo).val("");
     // Definir o foco para o input
-    $(campo).focus();
+
     // Abandonar a execução
     return false;
   }
@@ -48,7 +48,7 @@ function posicaoLargada(campo, label, dados) {
           // Limpar o campo
           $(campo).val("");
           // Definir o foco para o input
-          $(campo).focus();
+
           // Abandonar a execução
           return false;
         }
@@ -77,7 +77,7 @@ function validarCampoInt(campo, alerta, label) {
     // Limpar o campo
     $(campo).val("");
     // Definir o foco para o input
-    $(campo).focus();
+
     // Abandonar a execução
     return false;
   }
@@ -154,7 +154,7 @@ function criaNovaTabela(dados){
   newThead +=  "<th>Posição</th>"
   newThead +=  "<th>Largada</th>"
   newThead +=  "<th>Competidor(a)</th>"
-  newThead +=  "<th>Tempo(s)</th>"
+  newThead +=  "<th>Tempo (s)</th>"
   newThead +=  "<th>Resultado</th>"
   newThead +=  "</tr>"
   newThead +=  "</thead>"
@@ -217,6 +217,24 @@ $(document).ready(function(){
 
   });
 
+  $("#btnLimpar").click(function(){
+    $("#alertaPosicao").hide();
+    $("#alertaTempo").hide();
+    $("#alertaNome").hide();
+    $("#idPosicao").removeClass("is-invalid");
+    $("#idPosicao").removeClass("is-valid");
+    $("#idTempo").removeClass("is-invalid");
+    $("#idTempo").removeClass("is-valid");
+    $("#idNome").removeClass("is-invalid");
+    $("#idNome").removeClass("is-valid");
+    $("#labelPosicao").removeClass("text-danger");
+    $("#labelTempo").removeClass("text-danger");
+    $("#labelNome").removeClass("text-danger");
+    $("#idPosicao").val("");
+    $("#idNome").val("");
+    $("#idTempo").val("");
+  });
+
   $("#btnVencedor").click(function(){
     if (matriz.length === 0) {
       window.alert("Entre com os dados primeiro!");
@@ -230,6 +248,22 @@ $(document).ready(function(){
       ordenaMatriz(matriz);
       $("#competicao-table tr").remove();
       criaNovaTabela(matriz);
+
+      $("#alertaPosicao").hide();
+      $("#alertaTempo").hide();
+      $("#alertaNome").hide();
+      $("#idPosicao").removeClass("is-valid");
+      $("#idPosicao").removeClass("is-invalid");
+      $("#idTempo").removeClass("is-invalid");
+      $("#idTempo").removeClass("is-valid");
+      $("#idNome").removeClass("is-invalid");
+      $("#idNome").removeClass("is-valid");
+      $("#labelPosicao").removeClass("text-danger");
+      $("#labelTempo").removeClass("text-danger");
+      $("#labelNome").removeClass("text-danger");
+      $("#idPosicao").val("");
+      $("#idNome").val("");
+      $("#idTempo").val("");
     }
 
   });

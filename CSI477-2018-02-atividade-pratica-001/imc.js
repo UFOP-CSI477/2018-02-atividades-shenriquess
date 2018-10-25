@@ -16,7 +16,6 @@ function validarCampo(campo, alerta, label) {
     // Limpar o campo
     $(campo).val("");
     // Definir o foco para o input
-    $(campo).focus();
     // Abandonar a execução
     return false;
   }
@@ -127,6 +126,19 @@ $(document).ready(function(){
 
   $("#btnReiniciar").click(function(){
     location.reload();
+  });
+
+  $("#btnLimpar").click(function(){
+    $("#alertaPeso").hide();
+    $("#alertaAltura").hide();
+    $("#idPeso").removeClass("is-invalid");
+    $("#idPeso").removeClass("is-valid");
+    $("#idAltura").removeClass("is-invalid");
+    $("#idAltura").removeClass("is-valid");
+    $("#labelPeso").removeClass("text-danger");
+    $("#labelAltura").removeClass("text-danger");
+    $("#idPeso").val("");
+    $("#idAltura").val("");
   });
 
   $("input[name='peso']").focusout(function(){
