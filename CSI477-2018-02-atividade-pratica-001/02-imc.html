@@ -34,7 +34,7 @@
         <div class="form-row">
           <div class="col">
             <div class="form-group">
-              <label for="peso" id="labelPeso">Entre com o seu peso:</label>
+              <label for="peso" id="labelPeso">Entre com o seu peso (Kg):</label>
               <input type="text" name="peso" value="" class="form-control form-control-lg" id="idPeso">
               <div class="alert alert-danger" style="display: none" id="alertaPeso">
                 <span>Entrada inválida!</span>
@@ -44,7 +44,7 @@
 
           <div class="col">
               <div class="form-group">
-                <label for="altura" id="labelAltura">Entre com a sua altura:</label>
+                <label for="altura" id="labelAltura">Entre com a sua altura (m):</label>
                 <input type="text" name="altura" value="" class="form-control form-control-lg" id="idAltura">
                 <div class="alert alert-danger" style="display: none" id="alertaAltura">
                   <span>Entrada inválida!</span>
@@ -54,14 +54,14 @@
 
           <div class="col">
               <div class="form-group">
-                <label for="valor" id="labelValor">Cálculo do IMC:</label>
+                <label for="valor" id="labelValor"><strong>IMC:</strong></label>
                 <input type="text" name="valor" value="" disabled   class="form-control form-control-lg" id="idValor">
               </div>
           </div>
 
           <div class="col">
               <div class="form-group">
-                <label for="classificacao" id="labelClassificacao">Classificação:</label>
+                <label for="classificacao" id="labelClassificacao"><strong>Classificação:</strong></label>
                 <input type="text" name="classificacao" disabled class="form-control form-control-lg" id="idClassificacao">
               </div>
           </div>
@@ -91,7 +91,6 @@
 
       </table>
       <div class="form-group">
-        <input type="button" class="btn btn-primary" name="intevaloPeso" value="Caulcular Peso Ideal" id="btnIntervalo">
         <input type="button" class="btn btn-warning" name="reiniciar" value="Reiniciar" id="btnReiniciar">
 
       </div>

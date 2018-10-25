@@ -65,9 +65,9 @@ function pesoIdeal(altura) {
   var arredMax = parseFloat(maximo.toFixed(2));
   var newRow = $("<tr>");
   var cols = "";
-  cols += '<td>' + $(altura).val() + '</td>';
-  cols += '<td>' + arredMin + '</td>';
-  cols += '<td>' + arredMax + '</td>';
+  cols += '<td>' + $(altura).val() + ' m</td>';
+  cols += '<td>' + arredMin + ' Kg</td>';
+  cols += '<td>' + arredMax + ' Kg</td>';
   cols += '</td>';
 
   newRow.append(cols);
@@ -103,6 +103,19 @@ $(document).ready(function(){
 
            dadosClassific("#idClassificacao",arred);
 
+           if ( !validarCampo("input[name='peso']", "#alertaPeso", "#labelPeso") &&
+                !validarCampo("input[name='altura']", "#alertaAltura", "#labelAltura")) {
+             window.alert("Entre com os dados primeiro!");
+           }else{
+             pesoIdeal("#idAltura");
+
+             $("#btnCalculo").attr("disabled", true);
+             $("#btnLimpar").attr("disabled", true);
+             $("#idPeso").attr("disabled", true);
+             $("#idAltura").attr("disabled", true);
+
+           }
+
 
     } else {
       $("input[name='valor']").val("");
@@ -111,21 +124,6 @@ $(document).ready(function(){
 
   });
 
-  $("#btnIntervalo").click(function(){
-    if ( !validarCampo("input[name='peso']", "#alertaPeso", "#labelPeso") &&
-         !validarCampo("input[name='altura']", "#alertaAltura", "#labelAltura")) {
-      window.alert("Entre com os dados primeiro!");
-    }else{
-      pesoIdeal("#idAltura");
-      $("#btnIntervalo").attr("disabled", true);
-      $("#btnCalculo").attr("disabled", true);
-      $("#btnLimpar").attr("disabled", true);
-      $("#idPeso").attr("disabled", true);
-      $("#idAltura").attr("disabled", true);
-
-    }
-
-  });
 
   $("#btnReiniciar").click(function(){
     location.reload();
