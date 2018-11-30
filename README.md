@@ -23,4 +23,4 @@ Para inserí-los no banco de dados basta acessar pasta a raiz do projeto atravé
 
 * É necessário rodar o comando *php artisan storage:link* que faz uma ligação simbólica com a pasta *storage*, pois só é possível exibir itens na view que estejam em /public.
 
-* Caso os links das imagens não funcionem, talvez seja necessário acessar a pasta *ProjetoPetshop\public* e apagar a(s) pasta(s) de atalho caso existam.
+* Caso os links das imagens não funcionem, talvez seja necessário acessar a pasta *ProjetoPetshop\public* e apagar a(s) pasta(s) de atalho, caso existam.
