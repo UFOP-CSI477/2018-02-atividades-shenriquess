@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
 use App\Produto;
-use App\Cart;
+use App\Carrinho;
 use App\Compra;
 use Session;
 
@@ -19,15 +19,15 @@ class CarrinhoController extends Controller
         $this->middleware('auth');
     }
 
-    public function postCart(Request $request){
-       if (!Session::has('cart')){
-         return redirect()->route('produto.shoppingCart');
+    public function postCarrinho(Request $request){
+       if (!Session::has('carrinho')){
+         return redirect()->route('produto.itensCarrinho');
        }
 
-       $oldCart = Session::get('cart');
-       $cart = new Cart($oldCart);
+       $oldCarrinho = Session::get('carrinho');
+       $carrinho = new Carrinho($oldCarrinho);
 
-       $aux = $cart->itens;
+       $aux = $carrinho->itens;
        foreach ($aux as $a) {
              $compra = new Compra();
              $compra->quantidade = $a['qtd'];
@@ -38,20 +38,22 @@ class CarrinhoController extends Controller
              $compra->save();
 
        }
-       Session::forget('cart');
-       return redirect()->route('inicio.index')->with( 'success' , 'Compra Realizada');
+       session()->flash('mensagem-compra', 'Compra Realizada!');
+       Session::forget('carrinho');
+       return redirect()->route('inicio.index');
      }
 
 
 
 
-     public function cancelCart(Request $request){
-        if (!Session::has('cart')){
-          return redirect()->route('produto.shoppingCart');
+     public function cancelCarrinho(Request $request){
+        if (!Session::has('carrinho')){
+          return redirect()->route('produto.itensCarrinho');
         }
 
-        Session::forget('cart');
-        return redirect()->route('inicio.index')->with( 'success' , 'Compra Cancelada');
+        Session::forget('carrinho');
+        session()->flash('mensagem-compra', 'Compra Cancelada!');
+        return redirect()->route('inicio.index');
       }
 
     }

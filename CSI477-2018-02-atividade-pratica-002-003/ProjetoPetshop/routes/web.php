@@ -50,21 +50,21 @@ Route::put('/produtos/atualizar/{id}', [
   'uses' => 'ProdutoController@atualizar',
   'as' => 'produtos.atualizar']);
 
-Route::get('/addCart/{id}', [
-	'uses' => 'HomeController@addCart',
-	'as' => 'produto.addCart']);
+Route::get('/addCarrinho/{id}', [
+	'uses' => 'HomeController@addCarrinho',
+	'as' => 'produto.addCarrinho']);
 
-Route::get('/cancelCart', [
-	'uses' => 'CarrinhoController@cancelCart',
-	'as' => 'produto.cancelCart']);
+Route::get('/cancelCarrinho', [
+	'uses' => 'CarrinhoController@cancelCarrinho',
+	'as' => 'produto.cancelCarrinho']);
 
-Route::get('/shoppingCart', [
-	'uses' => 'HomeController@getCart',
-	'as' => 'produto.shoppingCart']);
+Route::get('/itensCarrinho', [
+	'uses' => 'HomeController@getCarrinho',
+	'as' => 'produto.itensCarrinho']);
 
-Route::get('/postCart', [
-	'uses' => 'CarrinhoController@postCart',
-	'as' => 'produto.postCart']);
+Route::get('/postCarrinho', [
+	'uses' => 'CarrinhoController@postCarrinho',
+	'as' => 'produto.postCarrinho']);
 
 Route::get('/compras', [
   	'uses' => 'CompraController@index',

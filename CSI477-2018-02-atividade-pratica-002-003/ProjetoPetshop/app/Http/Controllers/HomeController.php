@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 use App\Http\Requests;
 
 use App\Produto;
-use App\Cart;
+use App\Carrinho;
 use App\Compra;
 use App\User;
 use Auth;
@@ -44,15 +44,15 @@ class HomeController extends Controller
         return redirect()->route('inicio.index');
     }
 
-    public function addCart(Request $request, $id){
+    public function addCarrinho(Request $request, $id){
 
     $produto = Produto::find($id);
-     $oldCart = Session::has('cart') ? Session::get('cart') : null;
-     $cart = new Cart($oldCart);
-     $cart->add($produto, $produto->id);
+     $oldCarrinho = Session::has('carrinho') ? Session::get('carrinho') : null;
+     $carrinho = new Carrinho($oldCarrinho);
+     $carrinho->add($produto, $produto->id);
 
-     $request->session()->put('cart', $cart);
-     //dd($request->session->get('cart'));
+     $request->session()->put('carrinho', $carrinho);
+     //dd($request->session->get('carrinho'));
      $request->session()->flash('admin-mensagem-sucesso', 'Produto adicionado ao carrinho!');
 
      return redirect()->route('inicio.index');
@@ -60,14 +60,14 @@ class HomeController extends Controller
 
    }
 
-   public function getCart(){
-       if (!Session::has('cart')) {
-           return view('carrinho.shoppingCart');
+   public function getCarrinho(){
+       if (!Session::has('carrinho')) {
+           return view('carrinho.itensCarrinho');
        }
 
-       $oldCart = Session::get('cart');
-       $cart = new Cart($oldCart);
-       return view('carrinho.shoppingCart', ['produtos' => $cart->itens, 'totalPreco' => $cart->total]);
+       $oldCarrinho = Session::get('carrinho');
+       $carrinho = new Carrinho($oldCarrinho);
+       return view('carrinho.itensCarrinho', ['produtos' => $carrinho->itens, 'totalPreco' => $carrinho->total]);
    }
 
 }

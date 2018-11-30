@@ -340,7 +340,7 @@ class ComposerStaticInit30e638ddaaf55a0e3c31bded30e90447
     );
 
     public static $classMap = array (
-        'App\\Cart' => __DIR__ . '/../..' . '/app/Cart.php',
+        'App\\Carrinho' => __DIR__ . '/../..' . '/app/Carrinho.php',
         'App\\Compra' => __DIR__ . '/../..' . '/app/Compra.php',
         'App\\Console\\Kernel' => __DIR__ . '/../..' . '/app/Console/Kernel.php',
         'App\\Exceptions\\Handler' => __DIR__ . '/../..' . '/app/Exceptions/Handler.php',

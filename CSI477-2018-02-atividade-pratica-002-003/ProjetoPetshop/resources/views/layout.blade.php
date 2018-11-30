@@ -22,8 +22,8 @@
               <ul class="right hide-on-med-and-down">
 
                   @if (Auth::guest())
-                    <li><a href="{{ route('produto.shoppingCart') }}" >
-                        Meu Carrinho <span>({{ Session::has('cart') ? Session::get('cart')->quant :'0' }})</span>
+                    <li><a href="{{ route('produto.itensCarrinho') }}" >
+                        Meu Carrinho <span>({{ Session::has('carrinho') ? Session::get('carrinho')->quant :'0' }})</span>
                           </a>
                     </li>
                     <li><a href="{{ url('/login') }}">Entrar</a></li>
@@ -33,8 +33,8 @@
 
                           <li><a href="{{ url('/produtos') }}">Início</a></li>
                       @else
-                      <li><a href="{{ route('produto.shoppingCart') }}" >
-                            Meu Carrinho <span>({{ Session::has('cart') ? Session::get('cart')->quant :'0' }})</span>
+                      <li><a href="{{ route('produto.itensCarrinho') }}" >
+                            Meu Carrinho <span>({{ Session::has('carrinho') ? Session::get('carrinho')->quant :'0' }})</span>
                               </a>
                       </li>
                       @endif

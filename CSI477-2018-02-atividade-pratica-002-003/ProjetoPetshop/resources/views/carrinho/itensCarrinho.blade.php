@@ -3,7 +3,7 @@
 
 @section('pagina_conteudo')
 
-	@if(Session::has('cart'))
+	@if(Session::has('carrinho'))
 
 		<div class="row">
 			<div class="col-sm6 col-md6">
@@ -38,8 +38,8 @@
 
           		<div class="row">
           			<div class="col-sm-6">
-          				<a href="{{ route('produto.postCart') }}" class="btn btn-success pull-right" role="button">Finalizar Compra</a>
-									<a href="{{ route('produto.cancelCart') }}" class="btn btn-danger pull-right" role="button">Cancelar Compra</a>
+          				<a href="{{ route('produto.postCarrinho') }}" class="btn btn-success pull-right" role="button">Finalizar Compra</a>
+									<a href="{{ route('produto.cancelCarrinho') }}" class="btn btn-danger pull-right" role="button">Cancelar Compra</a>
 								</div>
 
           		</div>

@@ -4,6 +4,9 @@
 @section('pagina_conteudo')
 
 <div class="container">
+	@if (Session::has('mensagem-compra'))
+					<div class="card-panel green"><strong>{{ Session::get('mensagem-compra') }}<strong></div>
+	@endif
 	<div class="row">
 	@foreach($registros as $registro)
 		<div class="col s12 m6 l4">

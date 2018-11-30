@@ -7,10 +7,11 @@ use App\Http\Requests;
 use Input;
 use App\Http\Controllers\Controller;
 use App\Produto;
-use App\Cart;
+use App\Carrinho;
 use App\Compra;
 use Auth;
 use Session;
+use DB;
 
 class ProdutoController extends Controller
 {
@@ -106,12 +107,15 @@ class ProdutoController extends Controller
 
     public function deletar($id)
     {
-
-
-        Produto::find($id)->delete();
-
-        //$req->session()->flash('admin-mensagem-sucesso', 'Produto deletado com sucesso!');
-
+         $compras = Compra::where([
+             'produto_id'    => $id])->first();
+        if(empty($compras)){
+          Produto::find($id)->delete();
+          session()->flash('admin-mensagem-sucesso', 'Produto excluído com sucesso!');
+        }
+        else{
+          session()->flash('admin-mensagem-sucesso', 'Não é possível excluir o produto!');
+        }
         return redirect()->route('produtos.index');
     }
 }

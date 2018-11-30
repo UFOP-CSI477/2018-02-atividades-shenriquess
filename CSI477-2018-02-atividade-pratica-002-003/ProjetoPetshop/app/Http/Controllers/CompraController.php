@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 use App\Http\Requests;
 
 use App\Produto;
-use App\Cart;
+use App\Carrinho;
 use App\User;
 use App\Compra;
 use Auth;

@@ -8,7 +8,7 @@ use App\User;
 use Auth;
 use Session;
 
-class Cart
+class Carrinho
 {
     public $itens = null;
     public $quant = 0;
@@ -16,12 +16,12 @@ class Cart
     public $id_prod = 0;
     public $id_usr = 0;
 
-    public function __construct($oldCart)
+    public function __construct($ItensAnt)
     {
-    	if ($oldCart) {
-    		$this->itens = $oldCart->itens;
-    		$this->quant = $oldCart->quant;
-    		$this->total = $oldCart->total;
+    	if ($ItensAnt) {
+    		$this->itens = $ItensAnt->itens;
+    		$this->quant = $ItensAnt->quant;
+    		$this->total = $ItensAnt->total;
 
     	}
     }

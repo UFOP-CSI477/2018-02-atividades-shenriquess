@@ -28,7 +28,7 @@ class Address extends \Faker\Provider\Address
     /** @link http://www.mapadeportugal.net/indicecidades.asp **/
     private static $cities = array(
         'Abrantes', 'Agualva-Cacém', 'Águeda', 'Albufeira', 'Alcácer do Sal', 'Alcobaça', 'Almada', 'Almeirim', 'Alverca do Ribatejo', 'Amadora', 'Amarante', 'Amora', 'Anadia', 'Angra do Heroísmo', 'Aveiro', 'Barcelos', 'Barreiro',
-        'Beja', 'Braga', 'Bragança', 'Caldas da Rainha', 'Camara de Lobos', 'Cantanhede', 'Cartaxo', 'Castelo Branco', 'Chaves', 'Coimbra', 'Covilhã', 'Elvas', 'Entroncamento', 'Ermesinde', 'Esmoriz', 'Espinho', 'Esposende', 'Estarreja',
+        'Beja', 'Braga', 'Bragança', 'Caldas da Rainha', 'Camara de Lobos', 'Cantanhede', 'Carrinhoaxo', 'Castelo Branco', 'Chaves', 'Coimbra', 'Covilhã', 'Elvas', 'Entroncamento', 'Ermesinde', 'Esmoriz', 'Espinho', 'Esposende', 'Estarreja',
         'Estremoz', 'Évora', 'Fafe', 'Faro', 'Fátima', 'Felgueiras', 'Fiães', 'Figueira da Foz', 'Freamunde', 'Funchal', 'Fundão', 'Gafanha da Nazaré', 'Gondomar', 'Gouveia', 'Guarda', 'Guimarães', 'Horta', 'Ílhavo', 'Lagoa', 'Lagos', 'Lamego',
         'Leiria', 'Lisboa', 'Lixa', 'Loulé', 'Loures', 'Lourosa', 'Macedo de Cavaleiros', 'Machico', 'Maia', 'Mangualde', 'Marco de Canaveses', 'Marinha Grande',
         'Matosinhos', 'Mealhada', 'Miranda do Douro', 'Mirandela', 'Montemor-o-Novo', 'Montijo', 'Moura', 'Odivelas', 'Olhão da Restauração', 'Oliveira de Azeméis', 'Oliveira do Hospital', 'Ourém', 'Ovar', 'Paços de Ferreira',

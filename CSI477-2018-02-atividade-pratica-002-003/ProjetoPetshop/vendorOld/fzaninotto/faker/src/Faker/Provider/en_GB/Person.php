@@ -72,7 +72,7 @@ class Person extends \Faker\Provider\Person
     protected static $lastName = array(
         'Adams', 'Allen', 'Anderson',
         'Bailey', 'Baker', 'Bell', 'Bennett', 'Brown', 'Butler',
-        'Campbell', 'Carter', 'Chapman', 'Clark', 'Clarke', 'Collins', 'Cook', 'Cooper', 'Cox',
+        'Campbell', 'Carrinhoer', 'Chapman', 'Clark', 'Clarke', 'Collins', 'Cook', 'Cooper', 'Cox',
         'Davies', 'Davis',
         'Edwards', 'Ellis', 'Evans',
         'Fox',
