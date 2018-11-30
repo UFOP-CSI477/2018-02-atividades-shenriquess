@@ -7,7 +7,7 @@
 ### Matrícula: 15.1.8101
 ### E-mail: saulo.souza@aluno.ufop.edu.br
 
-#### As atividades foram realizadas utilizando o framework Laravel e tiveram algumas de suas partes baseadas no curso grátis do DevMedia **"LARAVEL: CRIANDO UM CARRINHO DE COMPRAS EM PHP.""** Disponível [aqui](https://www.devmedia.com.br/curso/laravel-criando-um-carrinho-de-compras-em-php/1958).
+#### As atividades foram realizadas utilizando o framework Laravel e tiveram algumas de suas partes baseadas no curso grátis do DevMedia **"LARAVEL: CRIANDO UM CARRINHO DE COMPRAS EM PHP."** Disponível [aqui](https://www.devmedia.com.br/curso/laravel-criando-um-carrinho-de-compras-em-php/1958).
 
 ##### **Orientações Básicas**
 
