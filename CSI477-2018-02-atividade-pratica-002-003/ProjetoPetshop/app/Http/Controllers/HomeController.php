@@ -70,4 +70,14 @@ class HomeController extends Controller
        return view('carrinho.itensCarrinho', ['produtos' => $carrinho->itens, 'totalPreco' => $carrinho->total]);
    }
 
+   public function cancelCarrinho(Request $request){
+      if (!Session::has('carrinho')){
+        return redirect()->route('produto.itensCarrinho');
+      }
+
+      Session::forget('carrinho');
+      session()->flash('mensagem-compra', 'Compra Cancelada!');
+      return redirect()->route('inicio.index');
+    }
+
 }

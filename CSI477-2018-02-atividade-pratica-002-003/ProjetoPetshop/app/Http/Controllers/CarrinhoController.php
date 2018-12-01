@@ -43,17 +43,4 @@ class CarrinhoController extends Controller
        return redirect()->route('inicio.index');
      }
 
-
-
-
-     public function cancelCarrinho(Request $request){
-        if (!Session::has('carrinho')){
-          return redirect()->route('produto.itensCarrinho');
-        }
-
-        Session::forget('carrinho');
-        session()->flash('mensagem-compra', 'Compra Cancelada!');
-        return redirect()->route('inicio.index');
-      }
-
     }

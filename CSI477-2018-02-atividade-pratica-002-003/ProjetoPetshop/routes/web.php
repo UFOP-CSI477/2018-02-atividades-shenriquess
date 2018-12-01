@@ -55,7 +55,7 @@ Route::get('/addCarrinho/{id}', [
 	'as' => 'produto.addCarrinho']);
 
 Route::get('/cancelCarrinho', [
-	'uses' => 'CarrinhoController@cancelCarrinho',
+	'uses' => 'HomeController@cancelCarrinho',
 	'as' => 'produto.cancelCarrinho']);
 
 Route::get('/itensCarrinho', [
