@@ -38,7 +38,7 @@ class CarrinhoController extends Controller
              $compra->save();
 
        }
-       session()->flash('mensagem-compra', 'Compra Realizada!');
+       session()->flash('user-mensagem-sucesso', 'Compra Realizada!');
        Session::forget('carrinho');
        return redirect()->route('inicio.index');
      }

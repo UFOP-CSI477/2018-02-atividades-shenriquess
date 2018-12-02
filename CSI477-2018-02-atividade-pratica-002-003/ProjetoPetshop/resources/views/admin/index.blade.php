@@ -5,9 +5,13 @@
 	<div class="container">
 		<div class="row">
 			<h3>Lista de produtos</h3>
-			@if (Session::has('admin-mensagem-sucesso'))
-	            <div class="card-panel green"><strong>{{ Session::get('admin-mensagem-sucesso') }}<strong></div>
-	        @endif
+			@if (Session::has('produto-mensagem-sucesso'))
+	            <div class="card-panel green"><strong>{{ Session::get('produto-mensagem-sucesso') }}<strong></div>
+	    @endif
+
+			@if (Session::has('produto-mensagem-erro'))
+	            <div class="card-panel red"><strong>{{ Session::get('produto-mensagem-erro') }}<strong></div>
+	    @endif
 			<table>
 				<thead>
 					<tr>

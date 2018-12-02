@@ -1,3 +1,4 @@
+
 @if (Auth::user()->type == 2)
 <div class="input-field">
 	<input type="text" name="nome" id="nome" value="{{ isset($registro->nome) ? $registro->nome : null }}">
@@ -5,8 +6,10 @@
 </div>
 @endif
 <div class="input-field">
-	<input type="text" name="preco" id="preco" value="{{ isset($registro->preco) ? $registro->preco : null }}">
+	<input type="text" class="dinheiro form-control" name="preco" id="preco" value="{{ isset($registro->preco) ? $registro->preco : null }}">
+
 	<label for="preco">Preço</label>
+
 </div>
 <div class="row"></div>
 <div class="row"></div>

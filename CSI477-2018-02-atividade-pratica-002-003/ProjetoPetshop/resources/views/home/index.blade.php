@@ -4,8 +4,11 @@
 @section('pagina_conteudo')
 
 <div class="container">
-	@if (Session::has('mensagem-compra'))
-					<div class="card-panel green"><strong>{{ Session::get('mensagem-compra') }}<strong></div>
+	@if (Session::has('user-mensagem-sucesso'))
+					<div class="card-panel green"><strong>{{ Session::get('user-mensagem-sucesso') }}<strong></div>
+	@endif
+	@if (Session::has('user-mensagem-erro'))
+					<div class="card-panel red"><strong>{{ Session::get('user-mensagem-erro') }}<strong></div>
 	@endif
 	<div class="row">
 	@foreach($registros as $registro)

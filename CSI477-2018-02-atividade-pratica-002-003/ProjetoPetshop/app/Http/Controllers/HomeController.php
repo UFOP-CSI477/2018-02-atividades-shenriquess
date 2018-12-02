@@ -76,7 +76,7 @@ class HomeController extends Controller
       }
 
       Session::forget('carrinho');
-      session()->flash('mensagem-compra', 'Compra Cancelada!');
+      session()->flash('user-mensagem-sucesso', 'Compra Cancelada!');
       return redirect()->route('inicio.index');
     }
 

@@ -28,7 +28,7 @@ class UserController extends Controller
 
       User::find(Auth::user()->id)->update($usuario);
       // salva o usuario alterado =)
-
+      session()->flash('produto-mensagem-sucesso', 'Edições concluídas com sucesso!');
       //Flash::message('Atualizado com sucesso!');
       return redirect()->route('inicio.index');// redireciona pra rota que você achar melhor =)
     }
@@ -40,5 +40,5 @@ class UserController extends Controller
 
     }
 
-    
+
 }

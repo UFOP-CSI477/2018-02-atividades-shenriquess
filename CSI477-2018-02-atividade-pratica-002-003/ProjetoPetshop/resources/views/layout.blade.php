@@ -12,6 +12,10 @@
 
     <link href="/css/styles.css" rel="stylesheet">
 
+
+
+
+
 </head>
 <body>
     <header>
@@ -95,6 +99,13 @@
 
     <!--Import jQuery before materialize.js-->
     <script type="text/javascript" src="//code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="/jQueryMask/jquery.mask.min.js"></script>
+    <script type="text/javascript">
+    $(document).ready(function($){
+    	$("#preco").mask("#.##0.00" ,{ reverse:true});
+
+    });
+    </script>
     <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js"></script>
     @stack('scripts')
     <script type="text/javascript">

@@ -46,6 +46,13 @@ class ProdutoController extends Controller
       $user = auth()->user();
       $dados = $req->all();
 
+
+
+      if(empty($dados['preco']) || empty($dados['nome']) ){
+          session()->flash('produto-mensagem-erro', 'Não foi possível concluir a operação!');
+          return redirect()->route('produtos.index');
+
+      }
       if($req->hasFile('imagem') && $req->file('imagem')->isValid()) {
 
         $nome = rand(100000, 999999);
@@ -60,6 +67,7 @@ class ProdutoController extends Controller
 
         //$file->move(public_path().'/images/', $nome);
         if(!$upload){
+          session()->flash('produto-mensagem-erro', 'Não foi possível realizar o cadastro!');
           return redirect()
                       ->back()
                       ->with('error','Falha ao fazero upload da imagem');
@@ -67,13 +75,30 @@ class ProdutoController extends Controller
 
       }
         Produto::create($dados);
-        $req->session()->flash('admin-mensagem-sucesso', 'Produto cadastrado com sucesso!');
+        session()->flash('produto-mensagem-sucesso', 'Produto cadastrado com sucesso!');
 
         return redirect()->route('produtos.index');
     }
 
     public function atualizar(Request $req, $id)
     {
+
+      $dados = $req->all();
+      if(Auth::user()->type == 2 ){
+          if(empty($dados['preco']) || empty($dados['nome']) ){
+              session()->flash('produto-mensagem-erro', 'Não foi possível concluir a operação!');
+              return redirect()->route('produtos.index');
+
+          }
+      }
+
+      if(Auth::user()->type == 3 ){
+          if(empty($dados['preco']) ){
+              session()->flash('produto-mensagem-erro', 'Não foi possível concluir a operação!');
+              return redirect()->route('produtos.index');
+          }
+      }
+
       $user = auth()->user();
       $dados = $req->all();
 
@@ -91,6 +116,7 @@ class ProdutoController extends Controller
 
         //$file->move(public_path().'/images/', $nome);
         if(!$upload){
+          session()->flash('produto-mensagem-erro', 'Não foi possível concluir a atualização!');
           return redirect()
                       ->back()
                       ->with('error','Falha ao fazero upload da imagem');
@@ -100,7 +126,7 @@ class ProdutoController extends Controller
 
         Produto::find($id)->update($dados);
 
-        $req->session()->flash('admin-mensagem-sucesso', 'Produto atualizado com sucesso!');
+        session()->flash('produto-mensagem-sucesso', 'Produto atualizado com sucesso!');
 
         return redirect()->route('produtos.index');
     }
@@ -111,10 +137,10 @@ class ProdutoController extends Controller
              'produto_id'    => $id])->first();
         if(empty($compras)){
           Produto::find($id)->delete();
-          session()->flash('admin-mensagem-sucesso', 'Produto excluído com sucesso!');
+          session()->flash('produto-mensagem-sucesso', 'Produto excluído com sucesso!');
         }
         else{
-          session()->flash('admin-mensagem-sucesso', 'Não é possível excluir o produto!');
+          session()->flash('produto-mensagem-erro', 'Não é possível excluir o produto!');
         }
         return redirect()->route('produtos.index');
     }
